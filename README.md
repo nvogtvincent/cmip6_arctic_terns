@@ -1,8 +1,8 @@
 # CMIP6 Arctic Terns (replace with actual title when we choose it...)
 This is the github repository for scripts required to reproduce figures and analyses in Morten et al. (202X) [Title].
 
-Repository structure:
-
+## Repository structure:
+```
 cmip6_arctic_terns/
 ├─ ternsim/                      
 │  ├─ PREPROCESSING.sh              | Shell script used to preprocess raw CMIP6 output for particle tracking
@@ -17,6 +17,6 @@ cmip6_arctic_terns/
 │  │  ├─ vTern_time_future.pdf      | Supp. Figure 3
 │  ├─ resources/
 │  │  ├─ gridsource.txt             | Regridding file used by PREPROCESSING.sh
-
+```
 
 
