@@ -7,9 +7,9 @@ cmip6_arctic_terns/
 ├─ ternsim/                      
 │  ├─ PREPROCESSING.sh              | Shell script used to preprocess raw CMIP6 output for particle tracking
 │  ├─ TernSim.py                    | Simulates vTern trajectories from preprocessed CMIP6 surface velocity data
-│  ├─ flight_path.py 	              | Generates Figure 4
-│  ├─ flight_time.py 	              | Generates Supplementary Figure 3
-│  ├─ path_comp.py	                | Generates Supplementary Figure 2
+│  ├─ flight_path.py 	            | Generates Figure 4
+│  ├─ flight_time.py 	            | Generates Supplementary Figure 3
+│  ├─ path_comp.py                  | Generates Supplementary Figure 2
 │  ├─ ternmethods.py                | Methods for TernSim.py   
 │  ├─ FIGURES/
 │  │  ├─ vTern_path_future.pdf      | Figure 4
