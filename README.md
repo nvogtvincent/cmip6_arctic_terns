@@ -20,7 +20,7 @@ cmip6_arctic_terns/
 │  │  ├─ sup_fig_6.pdf 		     | Supp. Figure 6
 │  │  ├─ sup_fig_7.pdf 		     | Supp. Figure 7
 │  │  ├─ sup_fig_8.pdf 		     | Supp. Figure 8
-│  ├─ SRC/
+│  ├─ SCRIPTS/
 │  │  ├─ observed_sie_winter.py	     | Generates Supplementary Figure 7
 │  │  ├─ observed_vs_modelled_sie.py | Generates Supplementary Figure 6
 │  │  ├─ productivity_change.py      | Generates Figure 7
