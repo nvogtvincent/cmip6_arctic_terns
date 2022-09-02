@@ -41,7 +41,7 @@ cmip6_arctic_terns/
 │  │  ├─ gridsource.txt              | Regridding file used by PREPROCESSING.sh
 ├─ winds/
 │  ├─ DATA/
-│  │  ├─ bird_heatmap		     | Heatmap of Tern locations
+│  │  ├─ bird_heatmap.nc		     | Heatmap of Tern locations
 │  │  ├─ ens_uas_hist.nc             | Historical zonal winds
 │  │  ├─ ens_uas_s245.nc             | SSP2-4.5 zonal winds
 │  │  ├─ ens_uas_s585.nc             | SSP5-8.5 zonal winds
@@ -51,7 +51,7 @@ cmip6_arctic_terns/
 │  ├─ FIGURES/
 │  │  ├─ ens_wind_zonal_nh.pdf       | Figure 3 (left panel)
 │  │  ├─ ens_wind_zonal_sh.pdf       | Figure 3 (right panel)
-│  ├─ zonal_winds.ipynb              | Generates Figure 3
+│  ├─ zonal_winds.py            	 | Generates Figure 3
 ```
 
 
