@@ -2,20 +2,16 @@
 """
 Created on Tue Jul  6 13:55:42 2021
 
-@author: Isolde Glissenaar
+@author: zq19140
 """
 
 ''' **Observed sea ice extend, decadal trend**'''
-
 #Plots the observed sea ice extend change (1981-2020) for Nov-Mar. 
-#Observations can be retrieved from https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.html (file to big to post on GitHub).
 
 import matplotlib.pyplot as plt
-from matplotlib import cm
 import matplotlib
 import xarray as xr
 import numpy as np
-import calendar
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 land_50m = cfeature.NaturalEarthFeature('physical', 'land', '50m')
@@ -25,10 +21,10 @@ import cmocean
 
 # Set some plotting defaults
 plt.rcParams['figure.figsize'] = (6, 4)
-plt.rcParams['figure.dpi'] = 100
+plt.rcParams['figure.dpi'] = 200
 
 #%%
-''' **Read observed ice concentration data** '''
+''' **Read ice concentration data** '''
 
 #NOAA OISST ice concentration 1981-2021, retrieved from:
 #https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.html
@@ -53,7 +49,7 @@ circle = mpath.Path(verts * radius + center)
 months = [10,11,12,1,2,3]
 letter = ['a','b','c','d','e','f']
 
-fig = plt.figure(figsize=(15,10))
+fig = plt.figure(figsize=(15,10), dpi=600)
 projection=ccrs.Orthographic(central_longitude=0, central_latitude=-90, globe=None)
 
 gs1 = gridspec.GridSpec(2, 3)
@@ -85,11 +81,11 @@ for j in range(len(months)):
         i += len(contour.collections)
     
     ax.add_feature(land_50m, facecolor='#eeeeee')
-    ax.text(-135, -32, letter[j], size=20, weight='bold', transform=ccrs.PlateCarree())
+    ax.text(-135, -32, letter[j], size=16, weight='bold', transform=ccrs.PlateCarree())
     
     ax.set_boundary(circle, transform=ax.transAxes)
     
-plt.legend(lines, labels, bbox_to_anchor=(-0.55, -0.1), loc='upper center', fontsize=18, ncol=4, frameon=False)
-plt.show()
+plt.legend(lines, labels, bbox_to_anchor=(-0.55, -0.1), loc='upper center', fontsize=14, ncol=4, frameon=False)
+
 
 
