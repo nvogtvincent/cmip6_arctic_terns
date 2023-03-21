@@ -32,8 +32,8 @@ def sel_region(dataset, months, extent=None):
     return ds
 
 
-sob = [-180, 180, -85, -0] # Southern ocean region
-aob = [-180, 180, 0, 85] # North Atlantic region
+sob = [-180, 180, -90, -0] # Southern ocean region
+aob = [-180, 180, -45, 90] # North Atlantic region
 som = [11,12,1,2,3] # Austral summer foraging season
 aom = [5,6,7,8]     # Arctic summer breeding season
 
@@ -66,7 +66,7 @@ def plot_zonal_winds_climate(kwargs, polar_stereo=False):
 
     gs = fig.add_gridspec(3, 4)
     csps = ccrs.NearsidePerspective(central_longitude=0.0,central_latitude=-90.0,satellite_height=35785831)
-    cnps = ccrs.NearsidePerspective(central_longitude=0.0, central_latitude=90.0, satellite_height=35785831)
+    cnps = ccrs.NearsidePerspective(central_longitude=-15.0, central_latitude=52.5, satellite_height=35785831)
 
     if polar_stereo == True:
         if kwargs == southern_kwargs:
@@ -76,9 +76,9 @@ def plot_zonal_winds_climate(kwargs, polar_stereo=False):
             f_ax2b = fig.add_subplot(gs[-1, :2], projection=csps)
             f_ax3b = fig.add_subplot(gs[-1, -2:], projection=csps)
 
-            fig.text(0.08, 0.77, 'b', fontsize=18)
-            fig.text(0.08, 0.5, 'd', fontsize=18)
-            fig.text(0.08, 0.23, 'f', fontsize=18)
+            fig.text(0.09, 0.77, 'b', fontsize=18)
+            fig.text(0.09, 0.5, 'd', fontsize=18)
+            fig.text(0.09, 0.23, 'f', fontsize=18)
 
         elif kwargs == northern_kwargs:
             f_ax1 = fig.add_subplot(gs[0, 1:-1], projection=cnps)
@@ -87,9 +87,9 @@ def plot_zonal_winds_climate(kwargs, polar_stereo=False):
             f_ax2b = fig.add_subplot(gs[-1, :2], projection=cnps)
             f_ax3b = fig.add_subplot(gs[-1, -2:], projection=cnps)
 
-            fig.text(0.08, 0.77, 'a', fontsize=18)
-            fig.text(0.08, 0.5, 'c', fontsize=18)
-            fig.text(0.08, 0.23, 'e', fontsize=18)
+            fig.text(0.09, 0.77, 'a', fontsize=18)
+            fig.text(0.09, 0.5, 'c', fontsize=18)
+            fig.text(0.09, 0.23, 'e', fontsize=18)
 
     else:
         f_ax1 = fig.add_subplot(gs[0, 1:-1], projection=kwargs['projection'])
@@ -155,7 +155,7 @@ northern_kwargs = {'bounds': [-180, 180, 0, 85], # North Atlantic region
                    'months': [5,6,7,8],     # Arctic summer breeding season
                    'projection': ccrs.Mercator(central_longitude=0.0, min_latitude=40, max_latitude=80),
                    'cont_kwarg': dict(x='lon', y='lat', add_colorbar=False, transform=ccrs.PlateCarree(),
-                                      cmap='RdBu_r', vmin=-4, vmax=4, levels=9, extend='both'),
+                                      cmap='RdBu_r', vmin=-8, vmax=8, levels=9, extend='both'),
                    'mesh_kwarg': dict(x='lon', y='lat', add_colorbar=False, transform=ccrs.PlateCarree(),
                                       cmap='PiYG_r', center=0, vmax=2),
                    'hist':ao_ensm_hist,
